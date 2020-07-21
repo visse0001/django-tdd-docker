@@ -52,6 +52,16 @@ To check the default Django tables were created:
 
 `docker-compose exec movies-db psql --username=movies --dbname=movies_dev`
 
+To create a superuser:
+
+In the first terminal:
+
+`docker-compose up`
+
+In the second terminal:
+
+`docker-compose exec movies python manage.py createsuperuser`
+
 ## Migrate db:
 `python manage.py makemigrations` <br>
 `python manage.py migrate`
