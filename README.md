@@ -68,6 +68,23 @@ To check the default Django tables were created:
 
 `python manage.py runserver`
 
+## Additional information when you make changes to the database in models.py
+
+- in the first terminal use command below
+
+`docker-compose up`
+
+- in the second terminal:
+
+check if the tests passed
+
+`docker-compose exec movies pytest`
+
+if everything works fine use the commands below:
+
+`docker-compose exec movies python manage.py makemigrations`
+`docker-compose exec movies python manage.py migrate`
+
 ## Access API
 
 ToDo
