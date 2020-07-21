@@ -82,7 +82,7 @@ check if the tests passed
 
 if everything works fine use the commands below:
 
-`docker-compose exec movies python manage.py makemigrations`
+`docker-compose exec movies python manage.py makemigrations` <br/>
 `docker-compose exec movies python manage.py migrate`
 
 ## Access API
