@@ -153,6 +153,13 @@ X-Frame-Options: DENY
 Ensure the Browsable API works as well:
 http://localhost:8000/api/movies/1/
 
+## Initial Data
+
+To seed some initial data from `movies.json` file:
+
+`docker-compose exec movies python manage.py flush`
+
+`docker-compose exec movies python manage.py loaddata movies.json`
 
 ## Stack ToDo:
 
