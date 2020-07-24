@@ -123,6 +123,35 @@ X-Frame-Options: DENY
     "year": "1996"
 }
 ```
+Next:
+
+`http --json http://localhost:8000/api/movies/1/`
+
+Result:
+
+```
+HTTP/1.1 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Length: 145
+Content-Type: application/json
+Date: Fri, 24 Jul 2020 13:23:35 GMT
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Accept, Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+{
+    "created_date": "2020-07-24T12:17:43.302434Z",
+    "genre": "comedy",
+    "id": 1,
+    "title": "Fargo",
+    "updated_date": "2020-07-24T12:17:43.302464Z",
+    "year": "1996"
+}
+```
+
+Ensure the Browsable API works as well:
+http://localhost:8000/api/movies/1/
 
 
 ## Stack ToDo:
