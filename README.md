@@ -97,7 +97,33 @@ if everything works fine use the commands below:
 
 ## Access API
 
-ToDo
+Try adding a new movie with HTTPie:
+
+`http --json POST http://localhost:8000/api/movies/ title=Fargo genre=comedy year=1996`
+
+Result:
+
+```
+HTTP/1.1 201 Created
+Allow: POST, OPTIONS
+Content-Length: 145
+Content-Type: application/json
+Date: Fri, 24 Jul 2020 12:17:43 GMT
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Accept, Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+{
+    "created_date": "2020-07-24T12:17:43.302434Z",
+    "genre": "comedy",
+    "id": 1,
+    "title": "Fargo",
+    "updated_date": "2020-07-24T12:17:43.302464Z",
+    "year": "1996"
+}
+```
+
 
 ## Stack ToDo:
 
